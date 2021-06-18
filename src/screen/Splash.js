@@ -6,27 +6,17 @@ import * as GS from "../StyleSheet/GeneralStyles";
 const Splash = (navigation) => {
   useEffect(async () => {
     setTimeout(() => {
-      navigation.navigation.replace("");
-    }, 2000);
+      navigation.navigation.replace("Name");
+    }, 3000);
   }, []);
   return (
-    <ImageBackground
-      style={[GS.fullDisplay]}
-      source={require("../Assets/SplashBg.png")}>
-      <View
-        style={[GS.fullDisplay, GS.row, GS.contentCenter]}
-      >
-        <View
-          style={[GS.row]}
-        >
-          <Text
-            style={[GS.font(23, Colors.MyAppPrimaryColor)]}
-          >
+    <ImageBackground style={[GS.fullDisplay]} source={require("../Assets/SplashBg.png")}>
+      <View style={[GS.fullDisplay, GS.row, GS.contentCenter]}>
+        <View style={[GS.row]}>
+          <Text style={[GS.font(23, Colors.MyAppPrimaryColor)]}>
             Crypto
           </Text>
-          <Text
-            style={[GS.font(23, Colors.white)]}
-          >
+          <Text style={[GS.font(23, Colors.white)]}>
             Wallet
           </Text>
         </View>
@@ -34,5 +24,4 @@ const Splash = (navigation) => {
     </ImageBackground>
   );
 };
-
 export default Splash;
